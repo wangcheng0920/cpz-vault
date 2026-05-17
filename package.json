@@ -15,9 +15,11 @@
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "cac": "^7.0.0",
+    "dayjs": "^1.11.20",
     "fs-extra": "^11.3.5",
     "handlebars": "^4.7.9",
     "inquirer": "^13.4.3",
+    "sass": "^1.99.0",
     "vitepress": "2.0.0-alpha.17"
   }
 }
