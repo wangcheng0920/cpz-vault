@@ -20,7 +20,7 @@ const padNumber = (value: number) => String(value).padStart(2, "0");
  * 将日期格式化为 frontmatter 使用的时间字符串。
  *
  * @param {Date} date - 需要格式化的日期对象。
- * @returns {string} 格式化后的 YYYY-MM-DD HH:mm:ss 字符串。
+ * @returns {string} 格式化后的 YYYY-MM-DDTHH:mm 字符串。
  */
 const formatDate = (date: Date) => {
   const year = date.getFullYear();
@@ -28,9 +28,8 @@ const formatDate = (date: Date) => {
   const day = padNumber(date.getDate());
   const hour = padNumber(date.getHours());
   const minute = padNumber(date.getMinutes());
-  const second = padNumber(date.getSeconds());
 
-  return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+  return `${year}-${month}-${day}T${hour}:${minute}`;
 };
 
 /**

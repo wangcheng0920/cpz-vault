@@ -29,7 +29,7 @@ export function extractFirstNParagraphs(html: string, count = 3): string {
  * @returns {number} 排序比较结果。
  */
 function comparePostByDate(left: ContentData, right: ContentData): number {
-  return right.frontmatter.date - left.frontmatter.date;
+  return dayjs(right.frontmatter.date).valueOf() - dayjs(left.frontmatter.date).valueOf();
 }
 
 /**
